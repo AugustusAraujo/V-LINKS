@@ -1,4 +1,4 @@
 # V-LINKS
-Um simples encurtador de url usando PHP e VUEJS.
+🌐 An open-source URL shortener.
 
-EM PRODUÇÃO.
+# ⚠ EM PRODUÇÃO ⚠
