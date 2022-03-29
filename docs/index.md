@@ -16,7 +16,7 @@ Documentation
     `METHOD : POST`
     `URI: /login`
 
-    #### Payload
+    **Payload**
 
     ```json
         {
@@ -25,9 +25,9 @@ Documentation
         }
     ```
 
-    #### Responses
+    **Responses**
 
-    ##### Sucess
+    Sucess
 
     ```json
         {
@@ -35,7 +35,7 @@ Documentation
         }
     ```
 
-    ##### Invalid username or password
+     Invalid username or password
 
     ```json
         {
@@ -43,7 +43,7 @@ Documentation
         }
     ```
 
-    ##### Empty Fields
+    Empty Fields
 
     ```json
         {
