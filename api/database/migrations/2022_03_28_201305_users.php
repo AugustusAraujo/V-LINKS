@@ -17,6 +17,7 @@ return new class extends Migration
             $table->bigIncrements("id");
             $table->string("username");
             $table->string("password");
+            $table->char("token",13);
             $table->timestamps();
         });
     }
