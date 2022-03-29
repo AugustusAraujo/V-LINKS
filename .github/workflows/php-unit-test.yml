@@ -11,11 +11,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Go to API
-      run: cd api
     - name: Validate composer.json and composer.lock
       run: composer validate --strict
-
+      working-directory: ./api
     - name: Cache Composer packages
       id: composer-cache
       uses: actions/cache@v3
@@ -26,10 +24,12 @@ jobs:
           ${{ runner.os }}-php-
 
     - name: Install dependencies
+      working-directory: ./api
       run: composer install --prefer-dist --no-progress
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
     - name: Run test suite
+      working-directory: ./api
       run: composer run-script test
