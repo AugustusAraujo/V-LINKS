@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="../logo_vlinks.png" width="100"/>
+<img src="https://github.com/AugustusAraujo/V-LINKS/blob/api/logo_vlinks.png?raw=true" width="100"/>
 
 <br>
 V-LINKS
