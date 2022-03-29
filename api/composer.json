@@ -28,7 +28,8 @@
     "scripts": {
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ]
+        ],
+        "test": "vendor/bin/phpunit"
     },
     "config": {
         "optimize-autoloader": true,
