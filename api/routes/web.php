@@ -16,4 +16,6 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
-$router->post("/login","UsersController@Login");
+$router->post("/login", "UsersController@Login");
+
+$router->get("/link[/{link}]", "LinksController@show");

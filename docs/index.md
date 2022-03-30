@@ -13,42 +13,80 @@ Documentation
 
 - ### Login
 
-    `METHOD : POST`
-    <br>
-    `URI: /login`
+  `METHOD : POST`<br>
+  `ENDPOINT: /login`
+
+  **Payload**
+
+  ```json
+  {
+      "username": <USERNAME>,
+      "password": <PASSWORD>
+  }
+  ```
+
+  **Responses**
+
+  Sucess : 200
+
+  ```json
+  {
+      "token": <USER-TOKEN>
+  }
+  ```
+
+  Invalid username or password : 400
+
+  ```json
+  {
+    "status": "Invalid user."
+  }
+  ```
+
+  Empty Fields: 400
+
+  ```json
+  {
+    "username": ["The username field is required."],
+    "password": ["The password field is required."]
+  }
+  ```
+
+- ## Link
+
+    ``METHOD : GET`` <br>
+    ``ENDPOINT: /login/<LINK>``
 
     **Payload**
-
-    ```json
-        {
-            "username": <USERNAME>,
-            "password": <PASSWORD>
-        }
-    ```
+    Passed in uri
+    ``/login/<LINK>``
 
     **Responses**
 
-    Sucess
+    Sucess : 200
 
     ```json
-        {
-            "token": <USER-TOKEN>
-        }
+    {
+        "user_id": <USER-ID>,
+        "shortened": <SHORTENED>,
+        "link": <UNSHORTENED-LINK>,
+        "created_at": <TIME>,
+        "updated_at": <TIME>
+    }
     ```
 
-     Invalid username or password
+    Invalid Param : 400
 
     ```json
-        {
-            "status": "Invalid user."
-        }
+    {
+        "status": "Invalid Param."
+    }
     ```
 
-    Empty Fields
+    Empty Field : 400
 
     ```json
-        {
-            "username": ["The username field is required."],
-            "password": ["The password field is required."]
-        }
+    {
+        "status": "Empty Field."
+    }
     ```

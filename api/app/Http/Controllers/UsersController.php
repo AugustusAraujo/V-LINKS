@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use \App\Models\Users;
+use Illuminate\Contracts\Encryption\Encrypter;
+use Illuminate\Encryption\Encrypter as EncryptionEncrypter;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 
 class UsersController extends Controller
 {
@@ -11,7 +14,7 @@ class UsersController extends Controller
      * The user login function
      * @param Request $request
      * @return string
-     */
+     */ 
     public function Login(Request $request)
     {
         $this->validate(
@@ -26,7 +29,7 @@ class UsersController extends Controller
         if (empty($results)) {
             return response(json_encode([
                 "status" => "Invalid user."
-            ]), 400, ["Content-Type" => "application/json"]);
+            ]), 400);
         }
         return response()->json(["token" => $results["token"]]);
     }
