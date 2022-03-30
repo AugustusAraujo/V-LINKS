@@ -9,6 +9,21 @@ Documentation
 
 ---
 
+<h2>Usage Rules</h2>
+
+You are free to use and edit this project, but you have to gave the credits to the project.
+
+---
+<!-- 
+<h2>Contribution Guide</h2>
+
+To contribute for this project you need to follow this rules:
+
+
+--- -->
+
+<h1 align="center">API</h1>
+
 <h2>Routes</h2>
 
 - ### Login
